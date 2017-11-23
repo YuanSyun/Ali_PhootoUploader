@@ -13,33 +13,34 @@
 <body>
 
   <div class="container">
+    <div class="menu">
 
+      <label class="take_button">
+          <img src="img/take_button.jpg" alt="take_button">
+          <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*" capture="camera" />
+      </label>
+      
+      <div class="select_button">
+        <select id="aliID" dir="rtl">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+        </select>
+      </div>
+        
+      <label class="upload_button">
+        <img src="img/upload.jpg" alt="upload">
+        <input type="button" onclick="uploadFile()" value="" />
+      </label>
+        
+      <div style="float: left;" class="details" id="details"></div>
+      <div style="float: right;" id="progress"></div>
 
-    <div class="select_button">
-
-      <label for="fileToUpload">Take or select photo(s)</label><br />
-
-      <input type="file" name="fileToUpload" id="fileToUpload" onchange="fileSelected();" accept="image/*" capture="camera" />
-
+      <video width="320" height="240" autoplay>
+          <source src="img/uploading.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-
-    <div class="details" id="details"></div>
-
-    <div>
-      <select id="aliID">
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Thress</option>
-          </select>
-    </div>
-
-    <div class="upload_button">
-      <input type="button" onclick="uploadFile()" value="Upload" />
-    </div>
-
-    <div class="result" id="progress"></div>
-
-
   </div>
 
 </body>
